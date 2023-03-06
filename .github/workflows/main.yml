@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: step 1
         ## Reference your environment variables
-        run: echo "The API key is ${{ variables.TEST }}"   
+        run: echo "The API key is ${{ secrets.TEST }}"   
       - name: step 2
         ## Reference your environment variables
         run: echo "The API key is:${{env.API_KEY}}"   
