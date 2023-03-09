@@ -38,18 +38,18 @@ runs:
           uses: actions/setup-node@v3
           with:
                node-version: 18
-               
         - name: Install dependencies
           working-directory: ./MAL-autoreadme
           run: npm i
           shell: bash
         - name: Run the script
           working-directory: ./MAL-autoreadme
-          run: node index.js
+          run: node index.mjs
           shell: bash
-          env:
+          env: 
               username: ${{ inputs.username }}
               gh_token: ${{ inputs.gh_token }}
+              malkey: ${{ var.malkey }}
               readme_path: ${{ inputs.readme_path }}
               branch: ${{ inputs.branch }}
               limit: ${{ inputs.limit }}
