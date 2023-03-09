@@ -27,7 +27,7 @@ async function init() {
     if(malstatus == 404 && fetched?.error === "not_found") throw new Error("Username not found")
     let history = fetched.data;
     console.log("History Founded, Parsing...")
-    list = parser.parseList(history, limit)
+    list = readmeutil.parseList(history, limit)
     console.log("History Parsed Success \n", list)
     let readme = await readmeutil.readme(readme_path, gh_token)
     console.log("\nGetting current README.md")
