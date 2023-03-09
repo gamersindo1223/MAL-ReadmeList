@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 dotenv.config()
 import fetch from 'node-fetch';
-const readmeutil = require("./lib/readme-util.js")
+const readmeutil = require("./lib/readme-util.mjs")
 const git = require("korefile")
 
 async function init() {
