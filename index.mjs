@@ -1,8 +1,8 @@
 import dotenv from 'dotenv'
 dotenv.config()
 import fetch from 'node-fetch';
-const readmeutil = require("./lib/readme-util.mjs")
-const git = require("korefile")
+import {append, readme, parseList} from "./lib/readme-append.mjs"
+const git = import("korefile")
 
 async function init() {
     let username = process.env.username
@@ -22,16 +22,16 @@ async function init() {
     let malstatus;
     let fetched = await (await fetch(`https://api.myanimelist.net/v2/users/${username}/animelist`, {headers: { 'X-MAL-CLIENT-ID': MalKey}}))
     malstatus = fetched.status
-    fetched = fetched.json()
+    fetched = await fetched.json()
     if(malstatus == 400 && fetched?.message == "Invalid client id") throw new Error("Invalid Myanimelist Client ID\nDo you misplled it?")
     if(malstatus == 404 && fetched?.error === "not_found") throw new Error("Username not found")
     let history = fetched.data;
     console.log("History Founded, Parsing...")
-    list = readmeutil.parseList(history, limit)
+    list = parseList(history, limit)
     console.log("History Parsed Success \n", list)
-    let readme = await readmeutil.readme(readme_path, gh_token)
+    let readme = await readme(readme_path, gh_token)
     console.log("\nGetting current README.md")
-    let newreadme = readmeutil.append(readme, list)
+    let newreadme = append(readme, list)
     console.log("Updated to the new readme")
     if (!gh_token) {
         throw new Error("Enter a token");
