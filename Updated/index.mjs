@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 import fetch from 'node-fetch';
 const git = import("korefile")
+import { upreadme } from './lib/readme-refresh.mjs';
 let username = process.env.username
 let gh_token = process.env.gh_token
 let readme_path = process.env.readme_path
@@ -11,16 +12,7 @@ let MalKey = process.env.malkey
 let completed_list = []
 let watching_list = []
 let onhold_list = []
-async function readme(path,gh_token) {
-    let fetchrepo = await (await fetch(`https://api.github.com/repos/${path}/git/trees/main`,{headers:{"Authorization":`token ${gh_token}`}})).json()
-    if(!fetchrepo.tree.find(x => x.path === 'README.md')){
-        throw new Error("No README.md found on this repo!.")
-    }
-    let readme = await (await fetch(fetchrepo.tree.find(x => x.path === 'README.md').url,{headers:{"Authorization":`token ${gh_token}`}})).json()
-    let decodebase64 = readme.content
-    decodebase64 = decodebase64.replace(/\s/g, '');
-    return decodeURIComponent(Buffer.from(decodebase64, 'base64'))
-}
+
 
 async function init() {
     console.log("username: " + username);
@@ -40,7 +32,6 @@ async function init() {
     anime_watching.data.forEach(data=>{watching_list.push(`${data.node.title}__${data.node.main_picture.large || data.node.main_picture.medium}`)})
     anime_onhold.data.forEach(data=>{onhold_list.push(`${data.node.title}__${data.node.main_picture.large || data.node.main_picture.medium}`)})
     console.log('Getting current readme')
-    let readme = await readme(readme_path, gh_token)
-
+    let readme = await upreadme(readme_path, gh_token)
 }
 init()

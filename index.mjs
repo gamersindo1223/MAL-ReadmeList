@@ -31,6 +31,7 @@ async function init() {
     console.log("History Parsed Success \n", list)
     let readme = await readme(readme_path, gh_token)
     console.log("\nGetting current README.md")
+    console.log(readme)
     let newreadme = append(readme, list)
     console.log("Updated to the new readme")
     if (!gh_token) {
