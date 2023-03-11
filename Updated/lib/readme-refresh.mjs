@@ -9,5 +9,17 @@ export async function upreadme(path,gh_token) {
     let readmes = await (await fetch(fetchrepo.tree.find(x => x.path === 'README.md').url,{headers:{"Authorization":`token ${gh_token}`}})).json()
     let decodebase64 = readmes.content
     decodebase64 = decodebase64.replace(/\s/g, '');
-     return console.log( decodeURIComponent(Buffer.from(decodebase64, 'base64')))
+     return decodeURIComponent(Buffer.from(decodebase64, 'base64'))
+}
+export function append(readme,data){
+    if(!readme.includes(patternstart)){
+        throw new Error("No pattern start found")
+    }
+    if(!readme.includes(patternend)){
+        throw new Error("No pattern end found")
+    }
+    let start = readme.indexOf(patternstart)
+    let end = readme.indexOf(patternend)
+    let newreadme = readme.substring(0,start+patternstart.length) + "\n\n" + data + "\n\n" + readme.substring(end,readme.length)
+    return newreadme
 }
