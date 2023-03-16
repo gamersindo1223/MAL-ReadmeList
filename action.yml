@@ -1,0 +1,49 @@
+name: "MyAnimeList readme GH-Actions"
+author: "Gamersindo1223"
+description: "Puts your newest activity from MyAnimeList into your readme"
+
+inputs:
+    gh_token:
+        description: "GitHub access token with Repo scope"
+        default: ${{ github.token }}
+        required: true
+
+    readme_path:
+        description: "Path of the readme file you want to update"
+        default: ""
+        required: true
+
+    branch:
+        description: "Branch of the README.md"
+        default: "main"
+        required: false
+    limit:
+        description: "Limit of history that will be showed"
+        default: "10"
+        required: false
+
+runs:
+    using: "composite"
+    steps:
+        - uses: actions/checkout@v3
+        - name: cloning MAL-autoreadme
+          run: git clone https://github.com/gamersindo1223/MAL-ReadmeList
+          shell: bash
+        - name: Set Node.js 18
+          uses: actions/setup-node@v3
+          with:
+               node-version: 18
+        - name: Install dependencies
+          working-directory: ./MAL-ReadmeList
+          run: npm i
+          shell: bash
+        - name: Run the script
+          working-directory: ./MAL-ReadmeList
+          run: node index.mjs
+          shell: bash
+          env: 
+              username: ${{ inputs.username }}
+              gh_token: ${{ inputs.gh_token }}
+              readme_path: ${{ inputs.readme_path }}
+              branch: ${{ inputs.branch }}
+              limit: ${{ inputs.limit }}
