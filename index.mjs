@@ -11,7 +11,7 @@ async function init() {
     let branch = process.env.branch
     let limit = process.env.limit
     let list;
-    console.log(await fetcher.fetchAnime("finished"))
+    console.log(await fetcher.fetchAnime("gamersindo1223", 10))
     /*
     const fetchAnimeList = async (status) => {
         const url = `https://myanimelist.net/animelist/${username}/load.json?status=${status}`;
