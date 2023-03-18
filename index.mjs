@@ -11,7 +11,12 @@ async function init() {
     let branch = process.env.branch
     let limit = process.env.limit
     let list;
-    console.log(await fetcher.fetchAnime("gamersindo1223", 10))
+    let data = await fetcher.fetchAnime(username)
+    let currentreadme = await fetcher.getreadme(readme_path, gh_token, branch)
+    let newreadme = await fetcher.appendAnimeWatching(currentreadme, data.completed)
+    console.log(newreadme)
+}
+init()
     /*
     const fetchAnimeList = async (status) => {
         const url = `https://myanimelist.net/animelist/${username}/load.json?status=${status}`;
@@ -24,5 +29,3 @@ async function init() {
         
       }
       */
-}
-init()
