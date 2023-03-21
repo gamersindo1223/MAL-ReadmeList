@@ -1,3 +1,3 @@
 # MAL-AutoreadmeUpdater
-<!-- MAL_ACTIVITY:start -->
-<!-- MAL_ACTIVITY:end -->
+<!-- MAL_ANIMEWATCING:start -->
+<!-- MAL_ANIMEWATCING:end -->
