@@ -1,3 +1,3 @@
 # MAL-AutoreadmeUpdater
-<!-- MAL_ANIMEWATCING:start -->
-<!-- MAL_ANIMEWATCING:end -->
+<!--MAL_ANIMEWATCHING:DEFAULT -->
+<!-- MAL_ANIMEWATCING:grid -->
