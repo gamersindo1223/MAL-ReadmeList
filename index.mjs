@@ -1,20 +1,20 @@
 import dotenv from 'dotenv'
 dotenv.config()
 import * as fetcher from './lib/Fetcher.mjs'
-import axios from 'axios'
-const git = import("korefile")
+import {createKoreFile, createGitHubAdaptor} from "korefile";
+
 
 async function init() {
     let username = process.env.username
     let gh_token = process.env.gh_token
     let readme_path = process.env.readme_path
     let branch = process.env.branch
-    let limit = process.env.limit
-    let list;
     let data = await fetcher.fetchAnime(username)
     let currentreadme = await fetcher.getreadme(readme_path, gh_token, branch)
-    let newreadme = await fetcher.appendAnimeWatching(currentreadme, data.completed)
-    console.log(newreadme)
+    let completednewreadme = await fetcher.appendAnimeCompleted(currentreadme, data.completed)
+    let watchingnewreadme = await fetcher.appendAnimeWatching(completednewreadme, data.watching)
+    let ptwnewreadme = await fetcher.appendAnimeCompleted(watchingnewreadme, data.ptw)
+    console.log(completednewreadme)
 }
 init()
     /*
