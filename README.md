@@ -41,8 +41,7 @@ jobs:
           gh_token: ${{ github.token }}
           mal_username: "gamersindo1223"
           repo_path: "gamersindo1223/gamersindo1223"
-	  branch: "main"
-	  filename: "README.md"
+	  
 ```
 ## Demo
 You can find it on my [Repo Readme](https://github.com/gamersindo1223/MAL-ReadmeList/tree/Testing-Purpose-(Do-not-Use)!
