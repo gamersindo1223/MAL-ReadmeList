@@ -10,10 +10,15 @@
 </details> 
 <!-- MAL_ANIMECOMPLETED:GRID_END -->
 <!-- MAL_ANIMECOMPLETED:DEFAULT -->
- ![Assassination Classroom](https://cdn.myanimelist.net/r/192x272/images/anime/5/75639.jpg?s=446c4a2d1f128c0d206af25d7e652b56) 
+ 
+![Assassination Classroom](https://cdn.myanimelist.net/r/192x272/images/anime/5/75639.jpg?s=446c4a2d1f128c0d206af25d7e652b56) 
+
 ![Assassination Classroom Second Season](https://cdn.myanimelist.net/r/192x272/images/anime/8/77966.jpg?s=07bb73e6c023546b8e1385216175a264) 
+
 ![Lycoris Recoil](https://cdn.myanimelist.net/r/192x272/images/anime/1392/124401.jpg?s=6c8c5c7a698ad01dce10006741d3db40) 
+
 ![Rascal Does Not Dream of Bunny Girl Senpai](https://cdn.myanimelist.net/r/192x272/images/anime/1301/93586.jpg?s=c5816f00664086dd8c815a1d79cafa4f) 
+
 ![Rascal Does Not Dream of a Dreaming Girl](https://cdn.myanimelist.net/r/192x272/images/anime/1613/102179.jpg?s=4caf2ddc8dc918652c81a4d734f961cb) 
  
 <!-- MAL_ANIMECOMPLETED:DEFAULT_END -->
@@ -36,7 +41,8 @@
 </details> 
 <!-- MAL_ANIMEWATCHING:GRID_END -->
 <!-- MAL_ANIMEWATCHING:DEFAULT -->
- ![Detective Conan: The Culprit Hanazawa](https://cdn.myanimelist.net/r/192x272/images/anime/1560/125527.jpg?s=dc9c6d3bd3dcf1f466b2635391dc6fc8) 
+ 
+![Detective Conan: The Culprit Hanazawa](https://cdn.myanimelist.net/r/192x272/images/anime/1560/125527.jpg?s=dc9c6d3bd3dcf1f466b2635391dc6fc8) 
  
 <!-- MAL_ANIMEWATCHING:DEFAULT_END -->
 <!-- MAL_ANIMEWATCHING:LIST -->
@@ -50,7 +56,8 @@
 </details> 
 <!-- MAL_ANIMEPTW:GRID_END -->
 <!-- MAL_ANIMEPTW:DEFAULT -->
- ![Komi Can't Communicate](https://cdn.myanimelist.net/r/192x272/images/anime/1899/117237.jpg?s=1ae3e5a7671ca90a21a816e207796484) 
+ 
+![Komi Can't Communicate](https://cdn.myanimelist.net/r/192x272/images/anime/1899/117237.jpg?s=1ae3e5a7671ca90a21a816e207796484) 
  
 <!-- MAL_ANIMEPTW:DEFAULT_END -->
 <!-- MAL_ANIMEPTW:LIST -->
