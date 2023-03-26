@@ -40,9 +40,9 @@ jobs:
         with:
           gh_token: ${{ github.token }}
           mal_username: "gamersindo1223"
-          repo_path: "gamersindo1223/gamersindo1223"
 		      repo_branch: "main"
 		      repo_filename: "README.md"
+          repo_path: "gamersindo1223/gamersindo1223"
 ```
 ## Demo
 
