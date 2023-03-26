@@ -38,14 +38,14 @@ jobs:
       - name: MyAnimeList readme workflow
         uses: MoonLGH/MAL-autoreadme@v2
         with:
-          gh_token: ${{ github.token }}
-          mal_username: "gamersindo1223"
-          repo_path: "gamersindo1223/gamersindo1223"
-	  branch: "main"
-	  filename: "README.md"
+         gh_token: ${{ github.token }}
+         mal_username: "gamersindo1223"
+	branch: "main"
+	filename: "README.md"
+         repo_path: "gamersindo1223/gamersindo1223"
  ```
 ## Demo
-You can find it on my [Repo Readme](https://github.com/gamersindo1223/MAL-ReadmeList/tree/Testing-Purpose-(Do-not-Use)!
+You can find it on my [Repo Readme](https://github.com/gamersindo1223/MAL-ReadmeList/tree/Testing-Purpose-(Do-not-Use))!
 
 ## Contributing
 
