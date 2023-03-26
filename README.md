@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: MyAnimeList readme workflow
-        uses: MoonLGH/MAL-autoreadme@v2
+        uses: gamersindo1223/MAL-ReadmeList@main
         with:
          gh_token: ${{ github.token }}
          mal_username: "gamersindo1223"
