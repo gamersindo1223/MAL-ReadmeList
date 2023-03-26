@@ -1,0 +1,50 @@
+name: "MyAnimeList readme GH-Actions"
+author: "Gamersindo1223"
+description: "Puts your newest anime activity from MyAnimeList into your readme"
+
+inputs:
+    gh_token:
+        description: "GitHub access token with Repo scope"
+        default: ${{ github.token }}
+        required: true
+    mal_username:
+        description: "Username of your MyanimeList Account"
+        default: "gamersindo1223"
+        required: true
+    repo_path:
+        description: "Path to your repository. Example: gamersindo1223/gamersindo1223"
+        default: ""
+        required: true
+    branch:
+        description: "Branch of your specified repository"
+        default: "main"
+        required: false
+    filename:
+        desciprtion: "Your Markdown Filename"
+        default: "README.md"
+        required: false
+runs:
+    using: "composite"
+    steps:
+        - uses: actions/checkout@v3
+        - name: cloning MAL-autoreadme
+          run: git clone https://github.com/gamersindo1223/MAL-ReadmeList
+          shell: bash
+        - name: Set Node.js 18
+          uses: actions/setup-node@v3
+          with:
+               node-version: 18
+        - name: Install dependencies
+          working-directory: ./MAL-ReadmeList
+          run: npm i
+          shell: bash
+        - name: Run the script
+          working-directory: ./MAL-ReadmeList
+          run: node index.mjs
+          shell: bash
+          env: 
+              gh_token: ${{ inputs.gh_token }}
+              mal_username: ${{ inputs.mal_username }}
+              repo_path: ${{ inputs.repo_path }}
+              branch: ${{ inputs.branch }}
+              filename: ${{ inputs.filename }}
