@@ -4,5 +4,19 @@
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.0.3",
     "korefile": "^2.1.1"
-  }
+  },
+  "name": "mal-readmelist",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

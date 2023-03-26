@@ -3,11 +3,11 @@ dotenv.config()
 import * as fetcher from './lib/Fetcher.mjs'
 import {createKoreFile, createGitHubAdaptor} from "korefile";
 async function init() {
-    let filename = process.env.filename || "README.md"
-    let username = process.env.username
     let gh_token = process.env.gh_token
-    let readme_path = process.env.readme_path
+    let username = process.env.mal_username
+    let readme_path = process.env.repo_path
     let branch = process.env.branch
+    let filename = process.env.filename || "README.md"
     let data = await fetcher.fetchAnime(username)
     let currentreadme = await fetcher.getreadme(readme_path, gh_token, branch, filename)
     let newreadme = await fetcher.appendAnime(currentreadme, data)
