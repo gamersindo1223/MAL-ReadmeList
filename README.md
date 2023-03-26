@@ -10,11 +10,16 @@
 </p> 
 <!-- MAL_ANIMECOMPLETED:DEFAULT_END -->
 <!-- MAL_ANIMECOMPLETED:LIST -->
- - 📺 Completed [Assassination Classroom](https://myanimelist.net/anime/24833/Ansatsu_Kyoushitsu/video) Episode 22 on (Mar 4 12:18 PM 2023)
-- 📺 Completed [Assassination Classroom Second Season](https://myanimelist.net/anime/30654/Ansatsu_Kyoushitsu_2nd_Season/video) Episode 25 on (Mar 4 12:18 PM 2023)
-- 📺 Completed [Lycoris Recoil](https://myanimelist.net/anime/50709/Lycoris_Recoil/video) Episode 13 on (Mar 4 12:12 PM 2023)
-- 📺 Completed [Rascal Does Not Dream of Bunny Girl Senpai](https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai/video) Episode 13 on (Mar 4 12:13 PM 2023)
+ - 📺 Completed [Assassination Classroom](https://myanimelist.net/anime/24833/Ansatsu_Kyoushitsu/video) Episode 22 on (Mar 4 12:18 PM 2023) 
+
+- 📺 Completed [Assassination Classroom Second Season](https://myanimelist.net/anime/30654/Ansatsu_Kyoushitsu_2nd_Season/video) Episode 25 on (Mar 4 12:18 PM 2023) 
+
+- 📺 Completed [Lycoris Recoil](https://myanimelist.net/anime/50709/Lycoris_Recoil/video) Episode 13 on (Mar 4 12:12 PM 2023) 
+
+- 📺 Completed [Rascal Does Not Dream of Bunny Girl Senpai](https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai/video) Episode 13 on (Mar 4 12:13 PM 2023) 
+
 - 📺 Completed [Rascal Does Not Dream of a Dreaming Girl](https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai/video) Episode 1 on (Mar 4 12:14 PM 2023) 
+ 
 <!-- MAL_ANIMECOMPLETED:LIST_END -->
 <p>Watching</p>
 <!-- MAL_ANIMEWATCHING:GRID -->
@@ -28,6 +33,7 @@
 <!-- MAL_ANIMEWATCHING:DEFAULT_END -->
 <!-- MAL_ANIMEWATCHING:LIST -->
  - 📺 Watching [Detective Conan: The Culprit Hanazawa](https://myanimelist.net/anime/50010/Meitantei_Conan__Hannin_no_Hanzawa-san/video) Episode 11 on (Mar 15 08:01 AM 2023) 
+ 
 <!-- MAL_ANIMEWATCHING:LIST_END -->
 <p>Plan TO watch</p>
 <!-- MAL_ANIMEPTW:GRID -->
@@ -41,4 +47,5 @@
 <!-- MAL_ANIMEPTW:DEFAULT_END -->
 <!-- MAL_ANIMEPTW:LIST -->
  - 📺 Plan To Watch [Komi Can't Communicate](https://myanimelist.net/anime/48926/Komi-san_wa_Comyushou_desu/video) Episode 6 on (Mar 4 12:15 PM 2023) 
+ 
 <!-- MAL_ANIMEPTW:LIST_END -->
