@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 dotenv.config()
 import * as fetcher from './lib/Fetcher.mjs'
-import {createKoreFile, createGitHubAdaptor} from "korefile";
+import { createKoreFile, createGitHubAdaptor} from "korefile";
 async function init() {
     let gh_token = process.env.gh_token
     let username = process.env.mal_username
