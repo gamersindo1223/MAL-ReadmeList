@@ -45,7 +45,6 @@ jobs:
 	  filename: "README.md"
 ```
 ## Demo
-
 You can find it on my [Repo Readme](https://github.com/gamersindo1223/MAL-ReadmeList/tree/Testing-Purpose-(Do-not-Use)!
 
 ## Contributing
