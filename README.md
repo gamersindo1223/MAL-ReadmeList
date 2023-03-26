@@ -22,10 +22,10 @@ Replace `<Status>` and  `<TYPE>` with the options on the table below
 >After That Make a new Github Actions with the value like this
 [Change all the value with your credentials, except github tokens]
 
-```yml
+```yaml
 on:
   schedule:
-    # Runs every hour
+    # Runs every hour or use crontab.guru for custom cron
     - cron: '0 * * * *'
   workflow_dispatch:
 
@@ -38,12 +38,12 @@ jobs:
       - name: MyAnimeList readme workflow
         uses: gamersindo1223/MAL-ReadmeList@main
         with:
-         gh_token: ${{ github.token }}
-         mal_username: "gamersindo1223"
-	branch: "main"
-	filename: "README.md"
-         repo_path: "gamersindo1223/gamersindo1223"
- ```
+          gh_token: ${{ github.token }}
+          mal_username: "gamersindo1223"
+          repo_branch: "main"
+          repo_filename: "README.md"
+          repo_path: "gamersindo1223/gamersindo1223"
+```
 ## Demo
 You can find it on my [Repo Readme](https://github.com/gamersindo1223/MAL-ReadmeList/tree/Testing-Purpose-(Do-not-Use))!
 
