@@ -6,16 +6,6 @@
 <!-- MAL_ANIMECOMPLETED:GRID_END -->
 <!-- MAL_ANIMECOMPLETED:DEFAULT -->
  
-![Assassination Classroom](https://cdn.myanimelist.net/images/anime/5/75639.jpg) 
-
-![Assassination Classroom Second Season](https://cdn.myanimelist.net/images/anime/8/77966.jpg) 
-
-![Lycoris Recoil](https://cdn.myanimelist.net/images/anime/1392/124401.jpg) 
-
-![Rascal Does Not Dream of Bunny Girl Senpai](https://cdn.myanimelist.net/images/anime/1301/93586.jpg) 
-
-![Rascal Does Not Dream of a Dreaming Girl](https://cdn.myanimelist.net/images/anime/1613/102179.jpg) 
- 
 <!-- MAL_ANIMECOMPLETED:DEFAULT_END -->
 <!-- MAL_ANIMECOMPLETED:LIST -->
  
