@@ -1,6 +1,6 @@
 # MAL readme workflow (REVAMP)
 
-> This is a simple workflow that will add your latest MAL History into your readme! This is a Revamp of [MoonLGH/MAL_Autolist](github.com/MoonLGH/MAL_Autolist/)
+> This is a simple workflow that will add your latest MAL History into your readme! This is a Revamp of [MoonLGH/MAL_Autolist](https://github.com/MoonLGH/MAL_Autolist/)
 
 ## How to Use
 
