@@ -30,7 +30,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-readme-with-blog:
+  update-readme-with-anime-history:
     name: Update this repo's README with latest MAL history
     runs-on: ubuntu-latest
     steps:
