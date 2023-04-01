@@ -20,7 +20,7 @@ inputs:
         default: "main"
         required: false
     repo_filename:
-        desciprtion: "Your Markdown Filename"
+        description: "Your Markdown Filename"
         default: "README.md"
         required: false
 runs:
