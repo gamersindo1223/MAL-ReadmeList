@@ -13,7 +13,6 @@ async function init() {
     let newreadme = await fetcher.appendAnime(currentreadme, data)
     if(newreadme === currentreadme){
         console.log("No new entries")
-        return process.exit(1)
     }
     
     console.log("New Changes Detected!")
