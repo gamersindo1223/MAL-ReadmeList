@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 import * as fetcher from './lib/Fetcher.mjs'
 import { createKoreFile, createGitHubAdaptor} from "korefile";
+import chalk from 'chalk'
 async function init() {
     let gh_token = process.env.gh_token
     let username = process.env.mal_username
@@ -12,11 +13,12 @@ async function init() {
     let currentreadme = await fetcher.getreadme(readme_path, gh_token, branch, filename)
     let newreadme = await fetcher.appendAnime(currentreadme, data)
     if(newreadme === currentreadme){
-        console.log("No new entries")
+        console.log(chalk.yellow('[INFO]') + " No new entries")
+        return;
     }
     
-    console.log("New Changes Detected!")
-    console.log("Pushing to Github")
+    console.log(chalk.green('[INFO]') + " New Changes Detected!")
+    console.log(chalk.green('[INFO]') + " Pushing to Github")
     let file = createKoreFile({
         adaptor: createGitHubAdaptor({
             owner: readme_path.split("/")[0],
@@ -26,6 +28,6 @@ async function init() {
         })
     });
     file.writeFile(filename, newreadme);
-    console.log(`${filename} Updated, Ending Process...`)
+    console.log(chalk.green('[INFO]') + ` ${filename} Updated, Ending Process...`)
 }
 init()
