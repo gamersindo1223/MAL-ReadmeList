@@ -7,8 +7,8 @@ async function init() {
     let gh_token = process.env.gh_token
     let username = process.env.mal_username
     let readme_path = process.env.repo_path
-    let branch = process.env.branch
-    let filename = process.env.filename || "README.md"
+    let branch = process.env.repo_branch
+    let filename = process.env.repo_filename || "README.md"
     let data = await fetcher.fetchAnime(username)
     let currentreadme = await fetcher.getreadme(readme_path, gh_token, branch, filename)
     let newreadme = await fetcher.appendAnime(currentreadme, data)
