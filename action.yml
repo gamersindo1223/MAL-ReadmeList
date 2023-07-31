@@ -46,5 +46,5 @@ runs:
               gh_token: ${{ inputs.gh_token }}
               mal_username: ${{ inputs.mal_username }}
               repo_path: ${{ inputs.repo_path }}
-              branch: ${{ inputs.repo_branch }}
-              filename: ${{ inputs.repo_filename }}
+              repo_branch: ${{ inputs.repo_branch }}
+              repo_filename: ${{ inputs.repo_filename }}
