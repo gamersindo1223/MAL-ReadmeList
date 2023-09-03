@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 dotenv.config()
-import * as fetcher from './lib/Fetcher.mjs'
+import * as fetcher from './lib/anime-fetch.mjs'
 import { createKoreFile, createGitHubAdaptor} from "korefile";
 import chalk from 'chalk'
 async function init() {
