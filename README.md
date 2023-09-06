@@ -1,7 +1,13 @@
 # MAL readme workflow (REVAMP)
 
-> This is a simple workflow that will add your latest MAL History into your readme! This is a Revamp of [MoonLGH/MAL_Autolist](https://github.com/MoonLGH/MAL_Autolist/)
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
 
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
 ## How to Use
 
 Simply add this to your Markdown File
@@ -10,14 +16,18 @@ Simply add this to your Markdown File
  <!-- MAL_ANIME<STATUS>:<TYPE> -->
  <!-- MAL_ANIME<STATUS>:<TYPE>_END -->
 ```
-Replace `<Status>` and  `<TYPE>` with the options on the table below
-> Note Always Use capital Letter for the type!
+Replace `<Status` and  `<TYPE>` with the options on the table below
+> Note Always Use capital letter when typing the status / type!
+
 
 | **Status** | **TYPE** |
 |------------|----------|
 | FINISHED   | DEFAULT  |
 | WATCHING   | LIST     |
 | PTW        | GRID     |
+
+
+
 ## Github Workflow!
 >After That Make a new Github Actions with the value like this
 [Change all the value with your credentials, except github tokens]
@@ -39,14 +49,14 @@ jobs:
         uses: gamersindo1223/MAL-ReadmeList@main
         with:
           gh_token: ${{ github.token }}
-          mal_username: "gamersindo1223"
-          repo_branch: "main"
-          repo_filename: "README.md"
-          repo_path: "gamersindo1223/gamersindo1223"
+          mal_username: "MYANIMELIST_USERNAME"
+          repo_branch: "BRANCHNAME"
+          repo_filename: "MARKDOWNFILENAME.md"
+          repo_path: "GITHUBNAME/GITHUBREPO"
 ```
 ## Demo
-You can find it on my [Repo Readme](https://github.com/gamersindo1223/MAL-ReadmeList/tree/Testing-Purpose-(Do-not-Use))!
+You can find it on my [Github Reasme](https://github.com/gamersindo1223/gamersindo1223)
 
 ## Contributing
 
-Contributing is very helpfull and it will help me maintaining and fixing bugs on this readme
+Contributing is very helpful and it will help me to solve any bugs on this project
