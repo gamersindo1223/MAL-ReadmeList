@@ -42,6 +42,6 @@ jobs:
           repo_path: "GITHUBNAME/GITHUBREPO"
 ```
 ## Demo
-You can find it on my [Github Reasme](https://github.com/gamersindo1223/gamersindo1223)
+You can find it on my [Github Readme](https://github.com/gamersindo1223/gamersindo1223)
 ## Contributing
 Contributing is very helpful and it will help me to solve any bugs on this project
