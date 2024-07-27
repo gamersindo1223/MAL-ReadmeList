@@ -30,6 +30,8 @@ jobs:
   update-readme-with-anime-history:
     name: Update this repo's README with latest MAL history
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - name: MyAnimeList readme workflow
