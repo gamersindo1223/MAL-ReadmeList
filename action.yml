@@ -1,6 +1,6 @@
 name: "MyAnimeList readme GH-Actions"
 author: "Gamersindo1223"
-description: "Puts your newest anime activity from MyAnimeList into your readme"
+description: "Puts your newest anime/manga activity from MyAnimeList into your readme"
 
 inputs:
     gh_token:
@@ -8,8 +8,8 @@ inputs:
         default: ${{ github.token }}
         required: true
     mal_username:
-        description: "Username of your MyanimeList Account"
-        default: "gamersindo1223"
+        description: "Username of your MyAnimeList Account"
+        default: ""
         required: true
     repo_path:
         description: "Path to your repository. Example: gamersindo1223/gamersindo1223"
@@ -20,31 +20,44 @@ inputs:
         default: "main"
         required: false
     repo_filename:
-        description: "Your Markdown Filename"
+        description: "Your Markdown filename"
         default: "README.md"
         required: false
+    max_entries:
+        description: "Maximum number of entries to show per list section (0 = unlimited)"
+        default: "0"
+        required: false
+    enable_manga:
+        description: "Set to 'true' to also update manga sections (MAL_MANGA...) in your README"
+        default: "false"
+        required: false
+    show_score:
+        description: "Set to 'true' to display your MAL score alongside each title"
+        default: "false"
+        required: false
+
 runs:
     using: "composite"
     steps:
-        - uses: actions/checkout@v3
-        - name: cloning MAL-autoreadme
-          run: git clone https://github.com/gamersindo1223/MAL-ReadmeList
-          shell: bash
-        - name: Set Node.js 18
-          uses: actions/setup-node@v3
+        - uses: actions/checkout@v4
+        - name: Set up Node.js 20
+          uses: actions/setup-node@v4
           with:
-               node-version: 18
+              node-version: 20
         - name: Install dependencies
-          working-directory: ./MAL-ReadmeList
-          run: npm i
+          working-directory: ${{ github.action_path }}
+          run: npm ci
           shell: bash
         - name: Run the script
-          working-directory: ./MAL-ReadmeList
-          run: node index.mjs
+          working-directory: ${{ github.action_path }}
+          run: npm run start
           shell: bash
-          env: 
-              gh_token: ${{ inputs.gh_token }}
-              mal_username: ${{ inputs.mal_username }}
-              repo_path: ${{ inputs.repo_path }}
-              repo_branch: ${{ inputs.repo_branch }}
+          env:
+              gh_token:      ${{ inputs.gh_token }}
+              mal_username:  ${{ inputs.mal_username }}
+              repo_path:     ${{ inputs.repo_path }}
+              repo_branch:   ${{ inputs.repo_branch }}
               repo_filename: ${{ inputs.repo_filename }}
+              max_entries:   ${{ inputs.max_entries }}
+              enable_manga:  ${{ inputs.enable_manga }}
+              show_score:    ${{ inputs.show_score }}

@@ -1,0 +1,22 @@
+name: Update README with MAL activity
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # hourly
+  workflow_dispatch:
+
+jobs:
+  mal:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gamersindo1223/MAL-ReadmeList@main
+        with:
+          gh_token: ${{ github.token }}
+          mal_username: "your_mal_username"
+          repo_path: ${{ github.repository }}
+          # Optional
+          max_entries: "5"
+          show_score: "false"
