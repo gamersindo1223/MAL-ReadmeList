@@ -18,8 +18,15 @@ async function main() {
     if (!username)  throw new Error('missing mal_username')
     if (!repo_path) throw new Error('missing repo_path')
 
+    console.log(chalk.cyan('[DEBUG]') + ` config: repo_path=${repo_path} branch=${branch} filename=${filename}`)
+    console.log(chalk.cyan('[DEBUG]') + ` options: max_entries=${maxEntries} enable_manga=${manga} show_score=${showScore}`)
+    console.log(chalk.cyan('[DEBUG]') + ` fetching anime data for MAL user ${username}`)
     const animeData = await fetcher.fetchAnime(username)
+    if (manga) {
+        console.log(chalk.cyan('[DEBUG]') + ` fetching manga data for MAL user ${username}`)
+    }
     const mangaData = manga ? await fetcher.fetchManga(username) : null
+    console.log(chalk.cyan('[DEBUG]') + ` reading ${filename} from ${repo_path}@${branch}`)
     const current   = await fetcher.getReadme(repo_path, gh_token, branch, filename)
 
     let updated = await fetcher.appendAnime(current, animeData, { maxEntries, showScore })
@@ -30,6 +37,7 @@ async function main() {
         return
     }
 
+    console.log(chalk.cyan('[DEBUG]') + ` updating ${filename} in ${repo_path}@${branch}`)
     const file = createKoreFile({
         adaptor: createGitHubAdaptor({
             owner: repo_path.split('/')[0],

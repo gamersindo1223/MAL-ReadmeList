@@ -181,4 +181,26 @@ describe('appendManga', () => {
         const r = await appendManga('<!-- MAL_MANGAREADING:LIST -->\n<!-- MAL_MANGAREADING:LIST_END -->', mockManga)
         assert.ok(r.includes('📖') && r.includes('Test Manga'))
     })
+
+    test('updates the current README marker format for both anime and manga blocks', async () => {
+        const readme = [
+            '# Demo Profile',
+            '',
+            '<!-- MAL_ANIMEWATCHING:LIST -->',
+            '<!-- MAL_ANIMEWATCHING:LIST_END -->',
+            '',
+            '<!-- MAL_ANIMECOMPLETED:DEFAULT -->',
+            '<!-- MAL_ANIMECOMPLETED:DEFAULT_END -->',
+            '',
+            '<!-- MAL_MANGAREADING:GRID -->',
+            '<!-- MAL_MANGAREADING:GRID_END -->'
+        ].join('\n')
+
+        const updated = await appendAnime(readme, mockAnime)
+        const finalReadme = await appendManga(updated, mockManga)
+
+        assert.ok(finalReadme.includes('📺'))
+        assert.ok(finalReadme.includes('<details>') && finalReadme.includes('<p float="left">'))
+        assert.ok(finalReadme.includes('Test Anime') && finalReadme.includes('Test Manga'))
+    })
 })
